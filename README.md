@@ -1,7 +1,25 @@
 
-## Installation
+# E-Commerce MERN Application
 
-Install my-project with npm
+A full-stack e-commerce web application built with the MERN stack (MongoDB, Express.js, React.js, Node.js) that allows users to browse products, manage shopping cart, and place orders.
+
+## 🚀 Features
+
+### Frontend
+- **Product Listing**: Grid layout displaying all available products
+- **Product Cards**: Show product image, name, description, price with "Add to Cart" functionality
+- **Shopping Cart**: Add/remove items, quantity management, total calculation
+- **Order Placement**: User information form with validation
+- **Responsive Design**: Works on desktop and mobile devices
+
+### Backend
+- **RESTful APIs**: Clean API endpoints for products and orders
+- **Product Management**: Fetch product data from in-memory storage
+- **Order Processing**: Handle order placement with validation
+- **Error Handling**: Comprehensive error handling and validation
+
+## 📁 Project Structure
+
 
 ```bash
 E-comm/
