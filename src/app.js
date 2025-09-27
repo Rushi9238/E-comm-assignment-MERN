@@ -47,14 +47,14 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
   
   // Handle all GET requests that aren't for the API
-  app.get("/*", (req, res, next) => {
-    // Skip API routes
-    if (req.path.startsWith("/api")) {
-      return next();
-    }
-    console.log("Serving index.html for route:", req.url);
-    res.sendFile(path.resolve(__dirname, "../frontend/dist/index.html"));
-  });
+ app.get("/:path(*)", (req, res, next) => {
+  // Skip API routes
+  if (req.path.startsWith("/api")) {
+    return next();
+  }
+  console.log("Serving index.html for route:", req.url);
+  res.sendFile(path.resolve(__dirname, "../frontend/dist/index.html"));
+});
 } else {
   // In development
   app.get("/", (req, res) => {
