@@ -1,0 +1,13 @@
+import React from 'react'
+
+const Button = ({children,props}) => {
+
+    const defualtStyle="    "
+  return (
+    <button>
+        {children}
+    </button>
+  )
+}
+
+export default Button
