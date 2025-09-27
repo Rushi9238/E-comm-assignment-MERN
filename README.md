@@ -2,6 +2,8 @@
 # E-Commerce MERN Application
 
 A full-stack e-commerce web application built with the MERN stack (MongoDB, Express.js, React.js, Node.js) that allows users to browse products, manage shopping cart, and place orders.
+## Hosted Link
+[Hosted Link](https://e-comm-assignment-mern-2.onrender.com/)
 
 ## 🚀 Features
 
