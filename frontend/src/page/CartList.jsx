@@ -9,11 +9,13 @@ import {
 } from "../components/ui/Card";
 import { CheckCircle, ShoppingBag } from "lucide-react";
 import { placeOrder } from "../services/api";
+import { useNavigate } from "react-router-dom";
 
 const InputBoxStyle =
   "border rounded-md py-2 px-2 block w-full outline-none mt-1.5 text-sm";
 
 const CartList = () => {
+  const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState({});
   const [orderError, setOrderError] = useState("");
@@ -47,7 +49,8 @@ const CartList = () => {
   };
 
   const handleClearCart = () => {
-   
+    clearCart();
+    navigate("/");
   };
 
   const handlePlaceOrder = async () => {
@@ -71,8 +74,8 @@ const CartList = () => {
       if (response.status) {
         clearCart();
         setOrderPlaced(true);
-      }else{
-        setOrderError(response.message)
+      } else {
+        setOrderError(response.message);
       }
 
       // Simulate successful order placement
@@ -89,17 +92,23 @@ const CartList = () => {
     }
   };
 
-    if (orderPlaced) {
+  if (orderPlaced) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         <Card className="w-full max-w-md text-center">
           <CardContent className="pt-6">
             <CheckCircle className="h-16 w-16 text-secondary mx-auto mb-4" />
-            <h1 className="text-2xl font-bold text-secondary mb-2">Order Placed!</h1>
+            <h1 className="text-2xl font-bold text-secondary mb-2">
+              Order Placed!
+            </h1>
             <p className="text-muted-foreground mb-6">
-              Thank you for your purchase. Your order has been successfully placed.
+              Thank you for your purchase. Your order has been successfully
+              placed.
             </p>
-            <button onClick={handleClearCart} className="w-full border py-2 rounded-md bg-primary text-white font-bold">
+            <button
+              onClick={handleClearCart}
+              className="w-full border py-2 rounded-md bg-primary text-white font-bold"
+            >
               Continue Shopping
             </button>
           </CardContent>
