@@ -55,15 +55,14 @@ E-comm/
 ### Frontend
 - **React.js** - UI framework
 - **React Router DOM** - Client-side routing
-- **Context API** - State management
+- **Context API And UseReducer hook** - State management
 - **Vite** - Build tool and dev server
-- **CSS3** - Styling
+- **TailwindCSS** - Styling
 
 ### Backend
 - **Node.js** - Runtime environment
 - **Express.js** - Web framework
 - **CORS** - Cross-origin resource sharing
-- **Cookie Parser** - Cookie handling
 
 ## 📋 Prerequisites
 
@@ -128,7 +127,7 @@ Environment: Node.js
 env
 NODE_ENV=production
 PORT=10000
-CORS_ORIGIN=https://your-app-name.onrender.com
+CORS_ORIGIN=https://e-comm-assignment-mern-2.onrender.com
 ````
 
 ## 📚 API Endpoints
@@ -154,11 +153,11 @@ Place Order: Fill in your details and click "Place Order"
 
 ## 🔧 Available Scripts
 Backend Scripts
-npm start - Start production server
+``` npm start ``` - Start production server
 
-npm run dev - Start development server with nodemon
+``` npm run dev ``` - Start development server with nodemon
 
-npm run build - Build frontend for production
+``` npm run build ``` - Build frontend for production
 
 Frontend Scripts (from frontend directory)
 npm run dev - Start Vite development server
